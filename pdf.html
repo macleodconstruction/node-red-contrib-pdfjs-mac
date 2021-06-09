@@ -1,42 +1,21 @@
-<script type="text/javascript">
-    RED.nodes.registerType('pdf',{
-        category: 'parser',
-	color: '#debd5c',
-	defaults: {
-            name: {value:""},
-            filename:	{value:""},
-			sortByY: {value:false},
-			sortByX: {value:false},
-			combineColumn: {value:false},
-			combineRow: {value:false}
-        },
-        inputs:1,
-        outputs:2,
-        icon: "file.svg",
-        label: function() {
-            return this.name||"pdf";
-        }
-    });
-</script>
-
 <script type="text/x-red" data-template-name="pdf">
-    <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-tag"></i>Name</label>
+	<div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span>Name</span></label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
     <div class="form-row">
-        <label for="node-input-filename"><i class="fa fa-file"></i>File Name</label>
+        <label for="node-input-filename"><i class="fa fa-file"></i> <span>File Name</span></label>
         <input type="text" id="node-input-filename" placeholder="Location of the pdf">
     </div>
-    <div class="form-row">
+	<div class="form-row">
         <input type="checkbox" id="node-input-sortByY" style="display:inline-block; width:auto; vertical-align: baseline">
-        <label for="node-input-sortByY" style="width: 70%;">Order text from top to bottom</label>
+        <label for="node-input-sortByY" style="width: 70%;"> <span>Order text from top to bottom</span></label>
     </div>
-    <div class="form-row">
+	<div class="form-row">
         <input type="checkbox" id="node-input-sortByX" style="display: inline-block; width: auto; vertical-align: baseline">
-        <label for="node-input-sortByX" style="width: 70%;">Order text from left to right</label>
+        <label for="node-input-sortByX" style="width: 70%;"> <span>Order text from left to right</span></label>
     </div>
-    <div class="form-row">
+	<div class="form-row">
         Merge text with next text in order if:<br/>
         <label><span>&nbsp;</span></label><label for="node-input-combineColumn" style="width:auto;"> both are in same column:</label>
         <input type="checkbox" id="node-input-combineColumn" style="display:inline-block; width:auto; vertical-align: baseline"><br/>
@@ -46,7 +25,7 @@
 </script>
 
 <script type="text/x-red" data-help-name="pdf">
-	<p>A node to help extract text contents from a pdf. Uses the Mozilla library found <a href="https://github.com/mozilla/pdf.js"> here</a> to extract text data.</p>
+    <p>A node to help extract text contents from a pdf. Uses the Mozilla library found <a href="https://github.com/mozilla/pdf.js"> here</a> to extract text data.</p>
 	<h3>Inputs</h3>
 	<dl class="message-properties">
         <dt class="optional">payload<span class="property-type">object | string</span></dt>
@@ -68,6 +47,20 @@
         <dt>payload<span class="property-type">array</span></dt>
         <dd>Results of the parsing will be returned as an array with each element in the array corresponding to a page in the pdf. </dd>
 		<dd> Each page in the array is stored as an array of objects which can be seen below. p is the order in the pdf document
+<pre>[
+  {
+    "p": 1,
+    "x": 328.78, // distance away from the right edge
+    "y": 1175.676, // distance away from the bottom of the page
+    "t": "Survey Responses 1/02/19 - 31/04/19" // text content
+  },
+  {
+    "p": 2, 
+    "x": 428.78, 
+    "y": 1175.676, 
+    "t": "Survey Responses 1/05/19 - 31/07/19"
+  }
+]</pre>
         </dd>
     </dl>
 	<h3>Tips</h3>
@@ -75,4 +68,25 @@
 	on the page each string should be, there might be cases where text would be returned out of order. This can be alleviated 
 	by sorting the document on its x and y coordinates in reverse y order.
 	</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('pdf',{
+        category: 'parser',
+        color: '#debd5c',
+        defaults: {
+            name: {value:""},
+            filename: {value:""},
+			sortByY: {value:false},
+			sortByX: {value:false},
+			combineColumn: {value:false},
+			combineRow: {value:false}
+        },
+        inputs:1,
+        outputs:2,
+        icon: "parser-html.png",
+        label: function() {
+            return this.name||"pdf";
+        }
+    });
 </script>
