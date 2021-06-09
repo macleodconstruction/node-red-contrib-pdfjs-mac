@@ -2,9 +2,8 @@ module.exports = function(RED) {
 	const fs = require('fs');
 	const pdfjsLib = require("pdfjs-dist/legacy/build/pdf.js");
 	
-    function pdfOutNode(config)
-	{
-		RED.nodes.createNode(this, config);
+    function pdfOutNode(config) {
+		RED.nodes.createNode(this,config);
 		var node = this;
 		node.filename = config.filename || "";
 		node.sortByX = config.sortByX || false;
