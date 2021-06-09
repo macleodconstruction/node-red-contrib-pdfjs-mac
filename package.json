@@ -1,7 +1,7 @@
 {
   "name": "node-red-contrib-pdfjs-mac",
   "version": "1.0.1",
-  "description": "Node-RED node to extract pdf data using pdfjs with ES5",
+  "description": "Node-RED node to extract pdf data using pdfjs with Legacy support",
   "dependencies": {
     "pdfjs-dist": "^2.9.359"
   },
@@ -11,7 +11,7 @@
   },
   "author": "Jack Menjivar, Simon Webster",
   "license": "ISC",
-  "keywords": ["node-red", "pdf", "es5"],
+  "keywords": ["node-red", "pdf", "legacy"],
   "node-red": {
     "nodes": {
       "pdf": "pdf.js"
