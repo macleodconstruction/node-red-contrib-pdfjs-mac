@@ -1,5 +1,5 @@
 {
-  "name": "node-red-contrib-pdfjs-es5-mac",
+  "name": "node-red-contrib-pdfjs-mac",
   "version": "1.0.0",
   "description": "Node-RED node to extract pdf data using pdfjs with ES5",
   "dependencies": {
