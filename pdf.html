@@ -1,5 +1,5 @@
 <script type="text/x-red" data-template-name="pdf">
-	<div class="form-row">
+    <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> <span>Name</span></label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
@@ -7,15 +7,15 @@
         <label for="node-input-filename"><i class="fa fa-file"></i> <span>File Name</span></label>
         <input type="text" id="node-input-filename" placeholder="Location of the pdf">
     </div>
-	<div class="form-row">
+    <div class="form-row">
         <input type="checkbox" id="node-input-sortByY" style="display:inline-block; width:auto; vertical-align: baseline">
         <label for="node-input-sortByY" style="width: 70%;"> <span>Order text from top to bottom</span></label>
     </div>
-	<div class="form-row">
+    <div class="form-row">
         <input type="checkbox" id="node-input-sortByX" style="display: inline-block; width: auto; vertical-align: baseline">
         <label for="node-input-sortByX" style="width: 70%;"> <span>Order text from left to right</span></label>
     </div>
-	<div class="form-row">
+    <div class="form-row">
         Merge text with next text in order if:<br/>
         <label><span>&nbsp;</span></label><label for="node-input-combineColumn" style="width:auto;"> both are in same column:</label>
         <input type="checkbox" id="node-input-combineColumn" style="display:inline-block; width:auto; vertical-align: baseline"><br/>
@@ -52,13 +52,13 @@
     "p": 1,
     "x": 328.78, // distance away from the right edge
     "y": 1175.676, // distance away from the bottom of the page
-    "t": "Survey Responses 1/02/19 - 31/04/19" // text content
+    "t": "Survey Responses 1/02/22 - 31/04/22" // text content
   },
   {
     "p": 2, 
     "x": 428.78, 
     "y": 1175.676, 
-    "t": "Survey Responses 1/05/19 - 31/07/19"
+    "t": "Survey Responses 1/05/22 - 31/07/22"
   }
 ]</pre>
         </dd>
@@ -84,7 +84,7 @@
         },
         inputs:1,
         outputs:2,
-        icon: "parser-html.png",
+        icon: "file.svg",
         label: function() {
             return this.name||"pdf";
         }
