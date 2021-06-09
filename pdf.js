@@ -1,6 +1,6 @@
 module.exports = function(RED) {
 	const fs = require('fs');
-	const pdfjsLib = require("pdfjs-dist/legacy/build/pdf.js");
+	const pdfjsLib = require("pdfjs-dist/es5/build/pdf.js");
 	
     function pdfOutNode(config) {
 		RED.nodes.createNode(this,config);
