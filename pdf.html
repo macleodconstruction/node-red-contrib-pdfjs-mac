@@ -73,7 +73,6 @@
 <script type="text/javascript">
     RED.nodes.registerType('pdf',{
         category: 'parser',
-        color: '#debd5c',
         defaults: {
             name: {value:""},
             filename: {value:""},
@@ -84,6 +83,7 @@
         },
         inputs:1,
         outputs:2,
+        color: '#debd5c',
         icon: "file.svg",
         label: function() {
             return this.name||"pdf";
