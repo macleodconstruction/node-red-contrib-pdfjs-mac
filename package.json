@@ -1,13 +1,13 @@
 {
   "name": "node-red-contrib-pdfjs-mac",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node-RED node to extract pdf data using pdfjs with ES5",
   "dependencies": {
     "pdfjs-dist": "^2.9.359"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/anakaine/node-red-contrib-pdfjs.git"
+    "url": "https://github.com/macleodconstruction/node-red-contrib-pdfjs-mac.git"
   },
   "author": "Jack Menjivar, Simon Webster",
   "license": "ISC",
