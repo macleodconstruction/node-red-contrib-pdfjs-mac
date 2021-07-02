@@ -23,13 +23,13 @@ Results of the parsing will be returned as an array with each element in the arr
 		"p": 1, // order on the page
 		"x": 328.78, // distance away from the right edge
 		"y": 1175.676, // distance away from the bottom of the page
-		"t": "Survey Responses 1/02/19 - 31/04/19" // text content
+		"t": "Survey Responses 1/02/21 - 31/04/21" // text content
 	},
 	{
 		"p": 2, 
 		"x": 428.78, 
 		"y": 1175.676, 
-		"t": "Survey Responses 1/05/19 - 31/07/19"
+		"t": "Survey Responses 1/05/21 - 31/07/21"
 	}
 ]
 ```
