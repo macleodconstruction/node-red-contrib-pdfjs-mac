@@ -3,7 +3,7 @@
   "version": "1.0.11",
   "description": "Node-RED node to extract pdf data using pdfjs with Legacy support",
   "dependencies": {
-    "pdfjs-dist": "^2.9.359"
+    "pdfjs-dist": "^2.10.377"
   },
   "repository": {
     "type": "git",
